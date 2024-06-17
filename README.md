@@ -14,14 +14,13 @@ Este projeto automatiza o fluxo de compra no site saucedemo.com utilizando Playw
 
 1. Clone o repositório:
    ```sh
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-   cd seu-repositorio
+   git clone https://github.com/gusstavocardoso/PlaywrightJavaTesting.git
+   cd PlaywrightJavaTesting
    ```
    
 2. Configure as variáveis de ambiente:
 
 - Crie um arquivo .env na raiz do projeto com o seguinte conteúdo:
-makefile
 
     ```sh
     SAUCEDEMO_USERNAME=your_username
