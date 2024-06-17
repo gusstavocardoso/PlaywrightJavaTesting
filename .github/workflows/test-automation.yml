@@ -22,14 +22,17 @@ jobs:
           java-version: '11'
           distribution: 'adopt' 
 
-      - name: Install dependencies
+      - name: Set up environment variables
+        run: |
+          echo "SAUCEDEMO_USERNAME=${{ secrets.SAUCEDEMO_USERNAME }}" >> .env
+          echo "SAUCEDEMO_PASSWORD=${{ secrets.SAUCEDEMO_PASSWORD }}" >> .env
+
+      - name: Install dependencies and run tests
         env:
           SAUCEDEMO_USERNAME: ${{ secrets.SAUCEDEMO_USERNAME }}
           SAUCEDEMO_PASSWORD: ${{ secrets.SAUCEDEMO_PASSWORD }}
-        run: mvn clean install        
-          
-      - name: Run tests
-        run: mvn test
+        run: |
+          mvn clean test
 
       - name: Upload Test Results
         uses: actions/upload-artifact@v2
