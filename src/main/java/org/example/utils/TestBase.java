@@ -1,7 +1,8 @@
 package org.example.utils;
 
 import com.microsoft.playwright.Page;
-import org.testng.annotations.*;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterClass;
 
 public class TestBase {
     protected Page page;
